@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mpc.MyAssociation.Domain.Models\Mpc.MyAssociation.Domain.Models.csproj" />
+  </ItemGroup>
+
 </Project>

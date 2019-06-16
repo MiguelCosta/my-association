@@ -2,5 +2,8 @@
 {
     public class AppSettings
     {
+        public DataBaseSettings DataBaseSettings { get; set; }
+
+        public int PageSize { get; set; } = 200;
     }
 }

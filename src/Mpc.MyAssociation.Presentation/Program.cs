@@ -1,22 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Mpc.MyAssociation.Presentation
+﻿namespace Mpc.MyAssociation.Presentation
 {
-    static class Program
+    using System;
+    using System.Threading;
+    using System.Windows.Forms;
+
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+
+            Core.IoC.Init();
+            var frmMain = Core.IoC.GetForm<FrmMain>();
+
+            Application.ThreadException += Application_ThreadException;
+
+            Application.Run(frmMain);
+        }
+
+        private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            Core.Messages.Information.ShowMessage(e.Exception.Message, "Error");
         }
     }
 }

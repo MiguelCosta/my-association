@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mpc.MyAssociation.Presentation
@@ -15,6 +8,12 @@ namespace Mpc.MyAssociation.Presentation
         public FrmMain()
         {
             InitializeComponent();
+            Core.ApplicationContext.MainForm = this;
+        }
+
+        private void MnuMembers_Click(object sender, EventArgs e)
+        {
+            Core.Helpers.OpenFormsHelpers.OpenForm<FormsMembers.FrmMemberList>();
         }
     }
 }
