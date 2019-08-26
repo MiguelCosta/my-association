@@ -15,17 +15,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{FD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infrastructure", "5 - Infrastructure", "{2F4566C9-1275-427E-94CC-2575776573DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Infrastructure.CrossCutting", "Mpc.MyAssociation.Infrastructure.CrossCutting\Mpc.MyAssociation.Infrastructure.CrossCutting.csproj", "{6443A09B-3AFF-4179-BFE1-4BA960FC590D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Infrastructure.CrossCutting", "Mpc.MyAssociation.Infrastructure.CrossCutting\Mpc.MyAssociation.Infrastructure.CrossCutting.csproj", "{6443A09B-3AFF-4179-BFE1-4BA960FC590D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Application.Services", "Mpc.MyAssociation.Application.Services\Mpc.MyAssociation.Application.Services.csproj", "{E1CEEDBB-7833-4D6F-B12A-662B409C7B16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Application.Services", "Mpc.MyAssociation.Application.Services\Mpc.MyAssociation.Application.Services.csproj", "{E1CEEDBB-7833-4D6F-B12A-662B409C7B16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Domain.Core", "Mpc.MyAssociation.Domain.Core\Mpc.MyAssociation.Domain.Core.csproj", "{959A80AD-7218-44B8-8D4E-E5D4B1FB33CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Domain.Core", "Mpc.MyAssociation.Domain.Core\Mpc.MyAssociation.Domain.Core.csproj", "{959A80AD-7218-44B8-8D4E-E5D4B1FB33CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Domain.Models", "Mpc.MyAssociation.Domain.Models\Mpc.MyAssociation.Domain.Models.csproj", "{7FC8B7BD-E3EB-4020-A35F-398EC6798DFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Domain.Models", "Mpc.MyAssociation.Domain.Models\Mpc.MyAssociation.Domain.Models.csproj", "{7FC8B7BD-E3EB-4020-A35F-398EC6798DFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Data.Ef", "Mpc.MyAssociation.Data.Ef\Mpc.MyAssociation.Data.Ef.csproj", "{3FE223FA-1393-4736-8C5C-C3AEE5E99B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Data.Ef", "Mpc.MyAssociation.Data.Ef\Mpc.MyAssociation.Data.Ef.csproj", "{3FE223FA-1393-4736-8C5C-C3AEE5E99B79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mpc.MyAssociation.Application.Dto", "Mpc.MyAssociation.Application.Dto\Mpc.MyAssociation.Application.Dto.csproj", "{BFAB969C-8FD7-4430-AE22-C654F8D3F3A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpc.MyAssociation.Application.Dto", "Mpc.MyAssociation.Application.Dto\Mpc.MyAssociation.Application.Dto.csproj", "{BFAB969C-8FD7-4430-AE22-C654F8D3F3A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{083A6B88-DDBC-4042-AB9C-EB739505A931}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseMigrations", "DataBaseMigrations", "{ACB8CED7-9F06-4C8D-9B22-7CB05F8D4E99}"
+	ProjectSection(SolutionItems) = preProject
+		DataBaseMigrations\001_CreateDatabase.sql = DataBaseMigrations\001_CreateDatabase.sql
+		DataBaseMigrations\002_CreateMembersTable.sql = DataBaseMigrations\002_CreateMembersTable.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +81,7 @@ Global
 		{7FC8B7BD-E3EB-4020-A35F-398EC6798DFB} = {597F284A-8127-44F8-89EC-72F37A96FFD1}
 		{3FE223FA-1393-4736-8C5C-C3AEE5E99B79} = {FD589255-A81F-48B5-B30C-9D083A85BDC3}
 		{BFAB969C-8FD7-4430-AE22-C654F8D3F3A3} = {F593CB10-2509-488C-8331-192893F322DC}
+		{ACB8CED7-9F06-4C8D-9B22-7CB05F8D4E99} = {083A6B88-DDBC-4042-AB9C-EB739505A931}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {178A87F4-395E-44CC-AD29-5E61F675AF2C}
