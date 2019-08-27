@@ -10,38 +10,54 @@
 
     public class MembersService : IMembersService
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
         public MembersService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public Task DeleteAsync(int memberId)
+        public async Task<MemberDto> CreateAsync(MemberDto member)
         {
-            throw new System.NotImplementedException();
+            var model = member.ToModel();
+
+            await _unitOfWork.MembersRepository.InsertAsync(model).ConfigureAwait(false);
+
+            await _unitOfWork.SaveChangesAsync().ConfigureAwait(false);
+
+            return model.ToDto();
         }
 
-        public Task<MemberDto> FindAsync(int memberId)
+        public async Task DeleteAsync(int memberId)
         {
-            throw new System.NotImplementedException();
+            await _unitOfWork.MembersRepository.DeleteAsync(memberId).ConfigureAwait(false);
+
+            await _unitOfWork.SaveChangesAsync().ConfigureAwait(false);
         }
 
-        public Task<MemberDto> InsertAsync(MemberDto member)
+        public async Task<MemberDto> FindAsync(int memberId)
         {
-            throw new System.NotImplementedException();
+            var member = await _unitOfWork.MembersRepository.FindAsync(memberId).ConfigureAwait(false);
+
+            return member.ToDto();
         }
 
-        public async Task<List<MemberDto>> SearchAsync()
+        public async Task<List<MemberDto>> SearchAsync(string text = "")
         {
-            var membersModel = await _unitOfWork.MembersRepository.SearchAsync().ConfigureAwait(false);
+            var membersModel = await _unitOfWork.MembersRepository.SearchAsync(text).ConfigureAwait(false);
 
             return membersModel.ToDto().ToList();
         }
 
-        public Task<MemberDto> UpdateAsync(int memberId, MemberDto member)
+        public async Task<MemberDto> UpdateAsync(MemberDto member)
         {
-            throw new System.NotImplementedException();
+            var model = member.ToModel();
+
+            await _unitOfWork.MembersRepository.UpdateAsync(model).ConfigureAwait(false);
+
+            await _unitOfWork.SaveChangesAsync().ConfigureAwait(false);
+
+            return model.ToDto();
         }
     }
 }

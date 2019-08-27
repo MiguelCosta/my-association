@@ -39,6 +39,7 @@ namespace Mpc.MyAssociation.Presentation.Core
         {
             services.AddSingleton<FrmMain>();
             services.AddTransient<FormsMembers.FrmMemberList>();
+            services.AddTransient<FormsMembers.FrmMemberEdit>();
         }
     }
 }

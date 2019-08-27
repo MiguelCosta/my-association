@@ -125,9 +125,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\ApplicationContext.cs" />
+    <Compile Include="Core\Helpers\DataGridViewHelpers.cs" />
     <Compile Include="Core\Helpers\OpenFormsHelpers.cs" />
     <Compile Include="Core\IoC.cs" />
     <Compile Include="Core\Messages\Information.cs" />
+    <Compile Include="FormsMembers\FrmMemberEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsMembers\FrmMemberEdit.Designer.cs">
+      <DependentUpon>FrmMemberEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsMembers\FrmMemberList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +149,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormsMembers\FrmMemberEdit.resx">
+      <DependentUpon>FrmMemberEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsMembers\FrmMemberList.resx">
       <DependentUpon>FrmMemberList.cs</DependentUpon>
     </EmbeddedResource>

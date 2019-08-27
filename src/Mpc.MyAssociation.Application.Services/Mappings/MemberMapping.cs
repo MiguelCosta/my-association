@@ -25,5 +25,21 @@ namespace Mpc.MyAssociation.Application.Services.Mappings
         {
             return models.Select(ToDto);
         }
+
+        public static Domain.Models.MemberModel ToModel(this Dto.MemberDto dto)
+        {
+            return dto == null ? null : new Domain.Models.MemberModel
+            {
+                AddressLine1 = dto.AddressLine1,
+                AddressLine2 = dto.AddressLine2,
+                City = dto.City,
+                Email = dto.Email,
+                Id = dto.Id,
+                Name = dto.Name,
+                PhoneNumber = dto.PhoneNumber,
+                PostalCode = dto.PostalCode,
+                Vat = dto.Vat
+            };
+        }
     }
 }

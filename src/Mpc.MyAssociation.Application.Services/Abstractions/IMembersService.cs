@@ -10,10 +10,10 @@
 
         Task<MemberDto> FindAsync(int memberId);
 
-        Task<MemberDto> InsertAsync(MemberDto member);
+        Task<MemberDto> CreateAsync(MemberDto member);
 
-        Task<List<MemberDto>> SearchAsync();
+        Task<List<MemberDto>> SearchAsync(string text = "");
 
-        Task<MemberDto> UpdateAsync(int memberId, MemberDto member);
+        Task<MemberDto> UpdateAsync(MemberDto member);
     }
 }

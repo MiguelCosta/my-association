@@ -1,6 +1,7 @@
 ﻿namespace Mpc.MyAssociation.Data.Ef
 {
     using System;
+    using System.Linq;
     using System.Threading.Tasks;
     using Mpc.MyAssociation.Domain.Core;
     using Mpc.MyAssociation.Domain.Core.Repositories;
@@ -19,9 +20,16 @@
 
         public IMembersRepository MembersRepository => _membersRepository.Value;
 
-        public Task SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
-            return _context.SaveChangesAsync();
+            await _context.SaveChangesAsync().ConfigureAwait(false);
+
+            var entities = _context.ChangeTracker.Entries().ToList();
+
+            foreach (var entry in entities)
+            {
+                entry.State = Microsoft.EntityFrameworkCore.EntityState.Detached;
+            }
         }
     }
 }

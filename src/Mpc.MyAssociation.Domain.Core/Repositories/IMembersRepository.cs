@@ -8,10 +8,14 @@
     {
         Task<int> CountAsync();
 
+        Task DeleteAsync(int memberId);
+
         Task<MemberModel> FindAsync(int id);
 
         Task InsertAsync(MemberModel member);
 
-        Task<List<MemberModel>> SearchAsync();
+        Task<List<MemberModel>> SearchAsync(string text);
+
+        Task UpdateAsync(MemberModel member);
     }
 }
