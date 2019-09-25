@@ -12,6 +12,7 @@
             AppSettings appSettings)
         {
             services.AddTransient<IMembersService, MembersService>();
+            services.AddTransient<IQuotasService, QuotasService>();
 
             return services;
         }

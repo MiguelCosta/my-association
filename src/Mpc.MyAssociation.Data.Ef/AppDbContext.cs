@@ -15,9 +15,12 @@
 
         public DbSet<MemberModel> Members { get; set; }
 
+        public DbSet<QuotaModel> Quotas { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new MemberMapping());
+            modelBuilder.ApplyConfiguration(new QuotaMapping());
         }
     }
 }

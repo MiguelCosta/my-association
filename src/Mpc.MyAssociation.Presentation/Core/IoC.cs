@@ -38,8 +38,10 @@ namespace Mpc.MyAssociation.Presentation.Core
         private static void RegisterForms(IServiceCollection services)
         {
             services.AddSingleton<FrmMain>();
-            services.AddTransient<FormsMembers.FrmMemberList>();
             services.AddTransient<FormsMembers.FrmMemberEdit>();
+            services.AddTransient<FormsMembers.FrmMemberList>();
+            services.AddTransient<FormsQuotas.FrmQuotaEdit>();
+            services.AddTransient<FormsQuotas.FrmQuotaList>();
         }
     }
 }

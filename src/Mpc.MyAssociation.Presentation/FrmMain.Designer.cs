@@ -47,6 +47,7 @@
             this.quotasToolStripMenuItem.Name = "quotasToolStripMenuItem";
             this.quotasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.quotasToolStripMenuItem.Text = "Quotas";
+            this.quotasToolStripMenuItem.Click += new System.EventHandler(this.quotasToolStripMenuItem_Click);
             // 
             // pagamentosToolStripMenuItem
             // 

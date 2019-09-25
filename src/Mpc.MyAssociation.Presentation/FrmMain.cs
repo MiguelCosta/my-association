@@ -15,5 +15,10 @@ namespace Mpc.MyAssociation.Presentation
         {
             Core.Helpers.OpenFormsHelpers.OpenForm<FormsMembers.FrmMemberList>();
         }
+
+        private void quotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Core.Helpers.OpenFormsHelpers.OpenForm<FormsQuotas.FrmQuotaList>();
+        }
     }
 }

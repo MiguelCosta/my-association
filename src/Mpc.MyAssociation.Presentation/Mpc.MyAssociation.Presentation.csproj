@@ -141,6 +141,18 @@
     <Compile Include="FormsMembers\FrmMemberList.Designer.cs">
       <DependentUpon>FrmMemberList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsQuotas\FrmQuotaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsQuotas\FrmQuotaEdit.Designer.cs">
+      <DependentUpon>FrmQuotaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsQuotas\FrmQuotaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsQuotas\FrmQuotaList.Designer.cs">
+      <DependentUpon>FrmQuotaList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +166,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsMembers\FrmMemberList.resx">
       <DependentUpon>FrmMemberList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsQuotas\FrmQuotaEdit.resx">
+      <DependentUpon>FrmQuotaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsQuotas\FrmQuotaList.resx">
+      <DependentUpon>FrmQuotaList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -169,6 +187,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Mpc.MyAssociation.Application.Dto.MemberDto.datasource" />
+    <None Include="Properties\DataSources\Mpc.MyAssociation.Application.Dto.QuotaDto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

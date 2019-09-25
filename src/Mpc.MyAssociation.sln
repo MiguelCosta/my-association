@@ -33,6 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseMigrations", "DataB
 	ProjectSection(SolutionItems) = preProject
 		DataBaseMigrations\001_CreateDatabase.sql = DataBaseMigrations\001_CreateDatabase.sql
 		DataBaseMigrations\002_CreateMembersTable.sql = DataBaseMigrations\002_CreateMembersTable.sql
+		DataBaseMigrations\003_CreateQuotasTable.sql = DataBaseMigrations\003_CreateQuotasTable.sql
 	EndProjectSection
 EndProject
 Global

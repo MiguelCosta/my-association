@@ -6,6 +6,11 @@ namespace Mpc.MyAssociation.Presentation.Core.Helpers
     {
         public static void OpenForm<TFrom>() where TFrom : Form
         {
+            foreach (var c in ApplicationContext.MainForm.MdiChildren)
+            {
+                c.Close();
+            }
+
             var form = IoC.GetForm<TFrom>();
             form.MdiParent = ApplicationContext.MainForm;
             form.Show();

@@ -7,6 +7,8 @@
     {
         IMembersRepository MembersRepository { get; }
 
+        IQuotasRepository QuotasRepository { get; }
+
         Task SaveChangesAsync();
     }
 }
